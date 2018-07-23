@@ -1,0 +1,47 @@
+/* General */
+body {
+	padding: 0;
+	margin: 0;
+}
+
+/* ++++ Colors */
+.cm-bg-home-blue {
+	background-color: #048ABF;
+}
+
+.cm-bg-home-red {
+	background-color: #D50000;
+}
+
+.cm-bg-white {
+	background-color: white;
+}
+
+/* Skewed divisions */
+.cm-pgm-bottom {
+	width: 100px;
+	height: 150px;
+	transform: skew(30deg);
+}
+
+.cm-pgm-top {
+	width: 100px;
+	height: 150px;
+	transform: skew(-30deg);
+}
+
+/* Locally Hosted Font Rounded Elegance */
+@font-face {
+  font-family: 'Rounded-Elegance';
+    src:  url('fonts/Rounded-Elegance/Rounded-Elegance.ttf.woff') format('woff'),
+    url('fonts/Rounded-Elegance/Rounded-Elegance.ttf.svg#Rounded-Elegance') format('svg'),
+    url('fonts/Rounded-Elegance/Rounded-Elegance.ttf.eot'),
+    url('fonts/Rounded-Elegance/Rounded-Elegance.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Expressa-DemiBold';
+	src: url('fonts/Expressa-DemiBold/Expressa-DemiBold.ttf');
+}
