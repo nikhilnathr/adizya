@@ -4,7 +4,28 @@ body {
 	margin: 0;
 }
 
+/* Trapezoid */
+.trapezoid {
+	border-bottom: 15vh solid #4d4d4d;
+	border-left: 80px solid transparent;
+	border-right: 80px solid transparent;
+	height: 0;
+	width: 460px;
+	position: absolute;
+	top: 0;
+	left: -80px;
+	
+}
+
 /* ++++ Colors */
+.cm-bg-home-indigo {
+	background-color: #02647e;
+}
+
+.cm-bg-home-purple {
+	background-color: #910174;
+}
+
 .cm-bg-home-blue {
 	background-color: #048ABF;
 }
@@ -17,18 +38,208 @@ body {
 	background-color: white;
 }
 
-/* Skewed divisions */
-.cm-pgm-bottom {
-	width: 100px;
-	height: 150px;
-	transform: skew(30deg);
+.cm-bg-home-gray {
+	background-color: #4d4d4d;
 }
 
-.cm-pgm-top {
-	width: 100px;
-	height: 150px;
-	transform: skew(-30deg);
+.cm-bg-home-navy {
+	background-color: #011c41;
 }
+
+.cm-bg-home-clay {
+	background-color: #d54b00;
+}
+
+/* ++++ Home Page Description Box Classes */
+.cm-home-rdbox-space {
+	height: 85vh;
+}
+	.cm-home-rdbox {
+		height: 350px; 
+		width: 804px; 
+		position: relative; 
+		overflow: hidden;
+	}
+		.cm-home-rdbox-texts-container {
+			z-index: 3; 
+			position: absolute; 
+			height: 350px; 
+			width: 469px; 
+			top: 0; 
+			left: 0;
+		}
+			.cm-home-rdbox-title-div {
+				display: table; 
+				position: relative; 
+				margin: 0 0 0 -21.5px; 
+				transform: rotate(-90deg);
+			}
+				.cm-home-rdbox-title {
+					color: white; 
+					font-family: Expressa-DemiBold; 
+					font-size: 41px; 
+					position: relative; 
+					margin: 0;
+				}
+			.cm-home-rdbox-desc-div {
+				width: 400px; 
+				height: 350px; 
+				display: inline; 
+				margin: 0 0 0 -20px; 
+				padding: 20.5px 23px 20.5px 0; 
+				box-sizing: border-box;
+			}
+				.cm-home-rdbox-desc {
+					text-align: justify; 
+					color: white; 
+					font-family: Rounded-Elegance; 
+					font-size: 18.5px; margin: 0;
+				}
+		.cm-home-rdbox-tpgm {
+			z-index: 2; 
+			height: 175px; 
+			width: 570.04px; 
+			position: absolute; 
+			top: 0; 
+			left: -50.2px;
+			transform: skew(-30deg);
+		}
+			.cm-home-rdbox-tpgm-inner {
+				height: 154.5px; 
+				width: 563px; 
+				position: absolute; 
+				top: 20.5px; 
+				left: 0;
+			}
+		.cm-home-rdbox-bpgm {
+			z-index: 2; 
+			height: 175px; 
+			width: 570.04px; 
+			position: absolute; 
+			top: 175px; 
+			left: -50.2px;
+			transform: skew(30deg);
+		}
+			.cm-home-rdbox-bpgm-inner {
+				height: 154.5px; 
+				width: 563px; 
+				position: absolute; 
+				top: 0; 
+				left: 0;
+			}
+		.cm-home-rdbox-img-plain {
+			width: 348px; 
+			height: 350px; 
+			position: absolute; 
+			top: 0; 
+			right: 0; 
+			z-index: 1;
+		}
+		.cm-home-rdbox-img-masked {
+			width: 348px; 
+			height: 350px; 
+			position: absolute; 
+			top: 0; 
+			right: -348px; 
+			z-index: 1;
+		}
+
+.cm-home-ldbox-space {
+	height: 85vh;
+}
+	.cm-home-ldbox {
+		height: 350px; 
+		width: 804px; 
+		position: relative; 
+		overflow: hidden;
+	}
+		.cm-home-ldbox-texts-container {
+			z-index: 3; 
+			position: absolute; 
+			height: 350px; 
+			width: 469px; 
+			top: 0; 
+			left: 335px;
+		}
+			.cm-home-ldbox-title-div {
+				display: table; 
+				position: relative; 
+				margin: 0 0 0 -30px; 
+				transform: rotate(-90deg);
+			}
+				.cm-home-ldbox-title {
+					color: white; 
+					font-family: Expressa-DemiBold; 
+					font-size: 41px; 
+					position: relative; 
+					margin: 0;
+				}
+			.cm-home-ldbox-desc-div {
+				width: 400px; 
+				height: 350px; 
+				display: inline; 
+				margin: 0 0 0 0px; 
+				padding: 20.5px 0 20.5px 23px; 
+				box-sizing: border-box;
+			}
+				.cm-home-ldbox-desc {
+					text-align: justify; 
+					color: white; 
+					font-family: Rounded-Elegance; 
+					font-size: 18.5px; 
+					margin: 0;
+					width: 376.5px;
+				}
+		.cm-home-ldbox-tpgm {
+			z-index: 2; 
+			height: 175px; 
+			width: 570.04px; 
+			position: absolute; 
+			top: 0; 
+			right: -50.2px;
+			transform: skew(30deg);
+		}
+			.cm-home-ldbox-tpgm-inner {
+				height: 154.5px; 
+				width: 563px; 
+				position: absolute; 
+				top: 20.5px; 
+				right: 0;
+			}
+		.cm-home-ldbox-bpgm {
+			z-index: 2; 
+			height: 175px; 
+			width: 570.04px; 
+			position: absolute; 
+			top: 175px; 
+			right: -50.2px;
+			transform: skew(-30deg);
+		}
+			.cm-home-ldbox-bpgm-inner {
+				height: 154.5px; 
+				width: 563px; 
+				position: absolute; 
+				top: 0; 
+				right: 0;
+			}
+		.cm-home-ldbox-img-plain {
+			width: 348px; 
+			height: 350px; 
+			position: absolute; 
+			top: 0; 
+			left: 0px; 
+			z-index: 1;
+		}
+		
+		.cm-home-ldbox-img-masked {
+			z-index: 1;
+			width: 348px; 
+			height: 350px; 
+			position: absolute; 
+			top: 0; 
+			left: -348px; 
+		}
+/* ----End of Home Page Description Box Classes */
 
 /* Locally Hosted Font Rounded Elegance */
 @font-face {
