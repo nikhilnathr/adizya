@@ -7,7 +7,7 @@
 
 
 
-/******************************** Lines **************************/ 
+/******************************** Lines Adizya logo**************************/ 
 
 var i=0;
 while(line = document.querySelectorAll('.lines path')[i]){
@@ -59,16 +59,31 @@ setTimeout(function(){
   pat.style.opacity= 1;
   // Go!
   pat.style.strokeDasharray = "200";
+  
 
-}, 2200)
+}, 2000)
 
 setTimeout(function(){
   document.querySelector('.animations .revolution').style.opacity = 1;
   document.querySelector('svg.fade circle').style.opacity = 1;
   document.querySelector('svg.fade circle').setAttribute("r", 220);
   document.querySelector(".lines").style.opacity = "0";
-}, 3200)
+}, 3000)
 
+setTimeout(function(){
+  document.querySelector('.text text').style.opacity = 0;
+},3800)
+
+/***********************************************************************
+
+                        NAV MENU MUSICAL BARS
+                            
+************************************************************************/
+var i=0;
+while(bar = document.querySelectorAll(".nav-header .musical-bars .bars")[i]){
+  bar.style.animation = "musical-bar 0.8s linear " + Math.random()*0.8 + "s infinite";
+  i++;
+}
 
 /***********************************************************************
 
