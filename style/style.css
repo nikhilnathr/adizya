@@ -4,11 +4,23 @@
   font-weight:normal;
   font-style:normal;
 }
+@font-face{
+  font-family:'Rounded-Elegance';
+  src:url('../fonts/rounded-elegance.ttf') format('truetype');
+  font-weight:normal;
+  font-style:normal;
+}
 
 body{
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
 }
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
 .header{
   position: fixed;
   top: 0;
@@ -83,6 +95,8 @@ body{
 .nav{
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
   height: 100vh;
   width: 80vw;
   max-width: 400px;
@@ -98,15 +112,72 @@ body{
   right: 0;
 }
 .nav .nav-header{
-  height: 200px;
+  min-height: 200px;
   width: 100%;
-  background-color: #55a3ff;
-  color: #003e86;
+  background-color: #003e86;
+  color: rgb(145, 196, 255);
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3em;
 }
+.nav-header .element{
+  position: absolute;
+  height: 200px;
+  width: 100%;
+}
+.nav-header .plane:first-child path{
+  animation: plane-fly 2.5s linear 0s infinite;
+}
+.nav-header .plane:nth-child(2) path{
+  transform: translateY(30px);
+  animation: plane-fly 2s linear 1s infinite;
+}
+.nav-header .plane:nth-child(3) path{
+  transform: translateY(-30px) translateX(-100px);
+  animation: plane-fly 3s linear 2s infinite;
+}
+.nav-header .musical-bars{
+  display: flex;
+  align-items: flex-end;
+}
+.nav-header .musical-bars .bars{
+  margin: 0 2px;
+  min-width: 18px;
+  background-color: rgb(145, 196, 255);
+  height: 10px;
+}
+.nav-header .eyes{
+  transform: scale(-0.5) translateY(80px) translateX(-120px);
+}
+.nav-header #lid {
+  animation: blink 2.4s infinite;
+}
+.nav-header #eye {
+  animation: squeeze 2.4s infinite;
+}
+.nav .link{
+  font-family: "Segoe UI",'Roboto',"Helvetica Neue",'Arial';
+  display: flex;
+  transition: color 400ms linear, background-color 500ms ease-out;
+  min-height: 50px;
+  font-size: 1.5em;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+.nav .link:hover{
+  color: #000;
+  background-color: #ddd;
+}
+/**************************************************************************************
+
+                                    MAIN
+
+***************************************************************************************/
+
 .main{
   margin-top: 50px;
 }
@@ -127,7 +198,6 @@ svg.main-logo{
   position: absolute;
   width: 202px;
 }
-
 svg.content{
   position:relative;
   opacity: 0;
@@ -138,6 +208,7 @@ svg.content{
 }
 .adiziya svg{
   position:relative;
+  left: 10px;
   top: 10px
 }
 svg.text{
@@ -166,7 +237,7 @@ svg.fade circle{
   opacity: 0;
   transition: opacity 1s ease-in 1s;
   font-size: 1.8em;
-  color: #bbb;
+  color: #d2d2d2;
 }
 .nitc{
   font-family: 'Gadugi';
@@ -181,6 +252,75 @@ svg.fade circle{
 .nitc .space{
   letter-spacing: 18px;
 }
+.contents{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+/***********************************************************************
+
+                            FOOTER
+
+***********************************************************************/
+.footer{
+  display:flex;
+  flex-direction: column;
+  font-family: 'Rounded-Elegance';
+}
+.footer .top{
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.footer .top .left-triangle, .footer .top .right-triangle{
+  height: 0;
+  position: relative;
+  left: 60px;
+  width: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-top: none;
+  border-bottom: 60px solid #444;
+}
+.footer .top .right-triangle{
+  left: 340px;
+}
+.footer a{ 
+  transition: all 300ms linear;
+}
+.footer a:hover{
+  color: #0073fa;
+  text-shadow: 0 0 2px #000;
+}
+.footer .top .middle{
+  position: relative;
+  left: -120px;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  min-width: 400px;
+  height: 60px;
+  background-color: #444;
+}
+.footer .top .middle .social-icons{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.footer .top .middle .social-icons i{
+  font-size: 2em;
+}
+.footer .bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1em;
+  padding: 0 15px;
+  height: 100px;
+  background-color: #444;
+  color: #fff;
+}
 @media only screen and (min-height:640px){
   .nitc{
     position: absolute;
@@ -190,5 +330,69 @@ svg.fade circle{
     width: 100%;
     left: 0;
     justify-content: flex-end;
+  }
+  .contents{
+    margin-top: 40vh;
+  }
+}
+
+
+
+/***************************************************************
+
+                      ANIMATIONS
+
+*****************************************************************/
+
+@keyframes plane-fly{
+  0%{
+    transform: translateX(-40px) translateY(-40px) rotate(30deg);
+  }
+
+  20%{
+    transform:translateX(50px) translateY(30px) rotate(0deg);
+  }
+  24%{
+    transform:translateX(60px) translateY(40px) rotate(-10deg);
+  }
+
+  48%{
+    transform: translateX(150px) translateY(-10px) rotate(10deg);
+  }
+  80%{
+    transform: translateX(200px) translateY(-50px) rotate(-45deg);
+  }
+  100%{
+    transform: translateX(200px) translateY(-50px) rotate(-45deg);
+  }
+
+}
+@keyframes musical-bar{
+  50%{
+    height: 65px;
+  }
+}
+@keyframes blink {
+  90% {
+    transform: none;
+    animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(15px) scaleY(0)
+  }
+  100% {
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes squeeze {
+  90% {
+    transform: none;
+    animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(3px) scaleY(0.8)
+  }
+  100% {
+    animation-timing-function: ease-out;
   }
 }
